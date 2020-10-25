@@ -13,6 +13,9 @@ class App extends React.Component {
       allStocks: [],
       allValues: [],
       averageValue: null,
+      standardDeviation: null,
+      moda: null,
+      mediana: null,
       showStatistics: false
     }
   }
@@ -72,15 +75,26 @@ class App extends React.Component {
       showStatistics: true
     })
 
-    let forStatistics = 0;
+    let forAverageValue = 0;
+    let averageValue = 0
     this.state.allValues.forEach( element => {
-      forStatistics+=element;
+      forAverageValue+=element;
+    })
+    averageValue = forAverageValue/this.state.allValues.length
+    this.setState({
+      averageValue: averageValue
+    })
+
+    let forStandardDeviation = 0
+    this.state.allValues.forEach( element => {
+      forStandardDeviation += ( element - averageValue )*( element - averageValue );
     })
     this.setState({
-      averageValue: forStatistics/this.state.allValues.length
+      standardDeviation: Math.sqrt( forStandardDeviation/this.state.allValues.length )
     })
+    
     console.log(this.state.allValues)
-    console.log( forStatistics/this.state.allValues.length );
+    
   }
 
   render () {
@@ -97,13 +111,13 @@ class App extends React.Component {
         </div>
         {this.state.showStatistics && <div className="statisticsBlock">
           <p>Среднее арифметическое</p>
-            <p>{this.state.averageValue}</p>
+            <p> { this.state.averageValue } </p>
           <p>Стандартное отклонение</p>
-          <p></p>
+            <p> { this.state.standardDeviation } </p>
           <p>Мода</p>
-          <p></p>
+            <p> { this.state.moda } </p>
           <p>Медиана</p>
-          <p></p>
+            <p> { this.state.mediana } </p>
         </div>}
       </div>
     )
