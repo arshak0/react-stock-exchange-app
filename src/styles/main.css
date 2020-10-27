@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body {
+    background: linear-gradient(white, #ffffdd);
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.headline_block {
+    margin-top: 50px;
+}
+
+.app_modas_div {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app_modas_div_p {
+    margin-left:10px;
+}
+
+.app_connected_status {
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.app_connected_success {
+    color: #038C7E;
+}
+
+.app_connected_pulse {
+    margin: auto 8px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.app_connected_success .app_connected_pulse {
+    animation: pulse 2s infinite;
+    background:#038C7E;
+    box-shadow: 0 0 0 #038C7E;
+}
+
+img.app_logo {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 60px;
+    top: 40px;
+}
+
+.app_connected_pulse {
+    animation: none;
+    background: #D90D32;
+    box-shadow: none;
+}
+
+@keyframes pulse {
+0% {
+    background: rgba(2, 140, 126, 1);
+    box-shadow: 0 0 0 0 rgba(2, 140, 126, 0.4);
+}
+
+70% {
+    background: rgba(2, 140, 126, 0.8);
+    box-shadow: 0 0 0 10px rgba(2, 140, 126, 0);
+}
+
+100% {
+    background: rgba(2, 140, 126, 0.2);
+    box-shadow: 0 0 0 0 rgba(2, 140, 126, 0);
+}
+}
+
+.app_author_name_div {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+h1.app_h1 {
+    display: flex;
+    justify-content: center;
+    color: #706f6f;
+    font-size: 40px;
+}
+
+h2.app_h2 {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    color: #706f6f;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.app_main_body {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app_buttons_div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 1px solid black;
+    outline: none;
+    background: black;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+    margin-left: 50%;
+    cursor: pointer;
+    margin-left:40px;
+}
+
+button:hover {
+    background: lightgray;
+    color: black;
+}
+
+button:active {
+    background: yellow;
+    color: black;
+}
+
+.app_buttons_div {
+    margin-top: 30px;
+}
+
+.app_started {
+    position: absolute;
+    right: 50px;
+    margin-top: 5px;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}
+
+.app_statisticsBlock {
+    margin-top: 20px;
+}
+
+.statistics_headline {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.mediana_headline {
+    margin-top: 4px;
+}
